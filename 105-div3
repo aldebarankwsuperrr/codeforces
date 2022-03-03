@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(){
+ long i,j,k,l,tmp,n,ans;
+
+ while( scanf("%ld", &n) == 1){  
+  ans = n/3;
+  ans <<= 1;
+
+  if( (n%3) ){
+   ans += (n%3) - 1;
+  }
+  printf("%ld\n",ans);
+ }
+ return 0;
+}
