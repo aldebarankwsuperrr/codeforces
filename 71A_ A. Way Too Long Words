@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+// A. Way Too Long Words
+
+std::string cek (std::string kata){
+    int panjang  = kata.length();
+    if (panjang > 10){
+        std::string temp = std::to_string(panjang-2);
+        kata.replace (kata.begin()+1, kata.end()-1, temp);
+    }
+    return kata;
+}
+
+int main (){
+    int n;
+    std::cin >> n;
+    std::string a;
+    for (int i = 0; i < n;i++){
+        std::cin >> a;
+        std::cout << cek (a) << std::endl;
+    }   
+
+    return 0;
+}
